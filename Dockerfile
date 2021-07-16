@@ -1,19 +1,22 @@
 FROM openjdk:16-slim-buster
 
-# see Makefile.version
+# See Makefile.version
 ARG VERSION
 
-MAINTAINER Silvio Fricke <silvio.fricke@gmail.com>
+# hadolint ignore=DL3008
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        wget \
+        unzip  \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y wget unzip && rm -rf /var/lib/apt/lists/*
-
-RUN wget https://www.languagetool.org/download/LanguageTool-$VERSION.zip && \
+RUN wget -q https://www.languagetool.org/download/LanguageTool-$VERSION.zip && \
     unzip LanguageTool-$VERSION.zip && \
     rm LanguageTool-$VERSION.zip
 
 WORKDIR /LanguageTool-$VERSION
 
-ADD misc/start.sh /start.sh
+COPY misc/start.sh /start.sh
 CMD [ "sh", "/start.sh" ]
 USER nobody
 EXPOSE 8010

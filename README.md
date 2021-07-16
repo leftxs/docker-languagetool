@@ -1,4 +1,3 @@
-
 # Introduction
 
 [LanguageTool] is an Open Source proof­reading software for English, French,
@@ -11,7 +10,12 @@ This is a Dockerfile to get the languagetools running on a system without java.
 [LanguageTool]: https://www.languagetool.org/
 [firefox-plugin]: https://addons.mozilla.org/firefox/addon/languagetoolfx/
 
-# Usage
+## Building
+- docker buildx create --name multibuilder
+- docker buildx use multibuilder
+- make build
+
+## Usage
 
 The Server is running on port 8010, this port should exposed.
 
@@ -34,7 +38,7 @@ docker run --name languagetool \
                         silviof/docker-languagetool:latest
 ```
 
-## ngram support
+### ngram support
 
 To support [ngrams] you need an additional volume or directory mounted to the
 `/ngrams` directory. For that add a `-v` to the `docker run`-command.
