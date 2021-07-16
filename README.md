@@ -1,12 +1,16 @@
-# Introduction
+<h2 align="center">Docker LanguageTool</h2>
 
-[LanguageTool] is an Open Source proof­reading software for English, French,
-German, Polish, and more than 20 other languages.
+<!-- TABLE OF CONTENTS -->
+## Table Of Contents
 
-You can use the LanguageTools with a [firefox-plugin].
+- [About the Project](#about-the-project)
+- [Usage](#usage)
 
-[LanguageTool]: https://www.languagetool.org/
-[firefox-plugin]: https://addons.mozilla.org/firefox/addon/languagetoolfx/
+## About The Project
+
+[LanguageTool](https://languagetool.org/) is an multilingual grammar, style, and spell checker.
+
+
 
 ## Building
 
