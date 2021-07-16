@@ -1,5 +1,5 @@
 
-name: Release for silvio/docker-languagetool
+name: Release for testthedocs/lt
 
 on:
   push:
