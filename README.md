@@ -20,7 +20,9 @@
 
 ## Usage
 
-The Server is running on port 8010, this port should exposed.
+(The Server is running on port 8010, this port should exposed.)
+
+*Check command below, not sure about the ports, default port of LT is 8081*
 
 ```shell
 docker pull testthedocs/lt
