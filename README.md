@@ -31,6 +31,8 @@ Or you run it in background via `-d`-option.
 
 Run with no minimum rights and RAM
 
+*Check command below, not sure about the ports, default port of LT is 8081*
+
 ``` shell
 docker run --name languagetool \
                         --cap-drop=ALL \
@@ -66,4 +68,6 @@ rm -f ngrams-en-20150817.zip
 
 One can use them using web browser plugin "Local server (localhost)" setting by running:
 
-    docker run -d --name languagetool -p 127.0.0.1:8081:8010 -v `pwd`/ngrams:/ngrams:ro --restart=unless-stopped testthedocs/lt
+```shell
+docker run -d --name languagetool -p 127.0.0.1:8081:8010 -v `pwd`/ngrams:/ngrams:ro --restart=unless-stopped testthedocs/lt
+```
