@@ -10,15 +10,11 @@
 
 [LanguageTool](https://languagetool.org/) is an multilingual grammar, style, and spell checker.
 
-
-
-## Building
-
-- docker buildx create --name multibuilder
-- docker buildx use multibuilder
-- make build
-
 ## Usage
+
+**Focus on the browser setup!**
+
+*Add examples about different browser plugins*
 
 (The Server is running on port 8010, this port should exposed.)
 
@@ -47,16 +43,17 @@ docker run --name languagetool \
                         testthedocs/lt:latest
 ```
 
-### ngram support
+### N-gram support
 
-To support [ngrams](http://wiki.languagetool.org/finding-errors-using-n-gram-data) you need an additional volume or directory mounted to the
+To support [n-gram](https://dev.languagetool.org/finding-errors-using-n-gram-data)
+you need an additional volume or directory mounted to the
 `/ngrams` directory. For that add a `-v` to the `docker run`-command.
 
 ```shell
 docker run ... -v /path/to/ngrams:/ngrams ...
 ```
 
-Download English ngrams with the commands:
+Download English n-grams with the commands:
 
 ```shell
 mkdir ngrams
@@ -70,3 +67,9 @@ One can use them using web browser plugin "Local server (localhost)" setting by 
 ```shell
 docker run -d --name languagetool -p 127.0.0.1:8081:8010 -v `pwd`/ngrams:/ngrams:ro --restart=unless-stopped testthedocs/lt
 ```
+
+## Building
+
+- docker buildx create --name multibuilder
+- docker buildx use multibuilder
+- make build
