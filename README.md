@@ -47,15 +47,12 @@ docker run --name languagetool \
 
 ### ngram support
 
-To support [ngrams] you need an additional volume or directory mounted to the
+To support [ngrams](http://wiki.languagetool.org/finding-errors-using-n-gram-data) you need an additional volume or directory mounted to the
 `/ngrams` directory. For that add a `-v` to the `docker run`-command.
 
 ```shell
 docker run ... -v /path/to/ngrams:/ngrams ...
-````
-
-[ngrams]: http://wiki.languagetool.org/finding-errors-using-n-gram-data
-
+```
 
 Download English ngrams with the commands:
 
