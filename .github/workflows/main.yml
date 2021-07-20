@@ -1,5 +1,5 @@
 
-name: Release for testthedocs/lt
+name: Release testthedocs/lt
 
 on:
   push:
