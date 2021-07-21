@@ -68,6 +68,23 @@ One can use them using web browser plugin "Local server (localhost)" setting by 
 docker run -d --name languagetool -p 127.0.0.1:8081:8010 -v `pwd`/ngrams:/ngrams:ro --restart=unless-stopped testthedocs/lt
 ```
 
+Using n-gram datasets
+LanguageTool can make use of large n-gram data sets to detect errors with words that are often confused, like their and there.
+
+Source: https://dev.languagetool.org/finding-errors-using-n-gram-data
+
+Download the n-gram dataset(s) to your local machine and mount the local n-gram data directory to the /ngrams directory in the Docker container using the -v configuration and set the languageModel configuration to the /ngrams folder.
+
+
+## Improving the spell checker
+
+> You can improve the spell checker without touching the dictionary. For single words (no spaces), you can add your words to one of these files:
+> * `spelling.txt`: words that the spell checker will ignore and use to generate corrections if someone types a similar word
+> * `ignore.txt`: words that the spell checker will ignore but not use to generate corrections
+> * `prohibited.txt`: words that should be considered incorrect even though the spell checker would accept them
+
+*Source: [https://dev.languagetool.org/hunspell-support](https://dev.languagetool.org/hunspell-support)*
+
 ## Building
 
 - docker buildx create --name multibuilder

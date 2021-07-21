@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :virtualbox do |v|
     v.gui = true
-    v.memory = 2048
+    v.memory = 3048
   end
 
   # Currently "ubuntu/focal64" on VirtualBox requires `type: "virtualbox"`

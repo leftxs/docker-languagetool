@@ -21,6 +21,9 @@ build:
 	docker buildx build $(BUILDARG_VERSION) $(BUILDARG_PLATFORM) -t $(IMAGENAME):latest .
 	docker buildx build $(BUILDARG_VERSION) --load -t $(IMAGENAME):latest .
 
+build-test:
+	docker build $(BUILDARG_VERSION) -t testthedocs/lt-test .
+
 test: test-cleanup.1
 test: TESTIPADDRESS=$(subst ",,$(shell docker inspect languagetool | jq '.[0].NetworkSettings.IPAddress'))
 test: test-print-ip-address
