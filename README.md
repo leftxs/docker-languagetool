@@ -12,6 +12,12 @@
 
 ## Usage
 
+### Test
+
+```shell
+docker run --name languagetool-test -p 127.0.0.1:8081:8010 testthedocs/lt-test
+```
+
 **Focus on the browser setup!**
 
 *Add examples about different browser plugins*
