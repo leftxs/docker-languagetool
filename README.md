@@ -96,3 +96,7 @@ Download the n-gram dataset(s) to your local machine and mount the local n-gram 
 - docker buildx create --name multibuilder
 - docker buildx use multibuilder
 - make build
+
+## Notes
+
+https://forum.languagetool.org/t/disable-auto-language-detection/6852/8
