@@ -100,3 +100,28 @@ Download the n-gram dataset(s) to your local machine and mount the local n-gram 
 ## Notes
 
 https://forum.languagetool.org/t/disable-auto-language-detection/6852/8
+
+## Local config
+
+```shell
+at .languagetool.cfg
+#LanguageTool configuration (4.4/2018-12-27 10:19)
+#Mon Jan 07 22:22:42 BRST 2019
+taggerShowsDisambigLog=false
+disabledRules.en-US=
+autoDetect=false
+disabledCategories.en-US=
+serverPort=8081
+useGUIConfig=false
+enabledRules.en-US=
+enabledCategories.en-US=
+numberParagraphs=5
+configurableRuleValues=
+language=en-US
+serverMode=false
+doResetCheck=false
+underlineColors=
+errorColors=
+```
+
+
