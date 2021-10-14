@@ -2,7 +2,7 @@
 #include Makefile.version
 
 # Vars
-VERSION := 5.4
+VERSION := 5.5
 BUILDARG_VERSION := --build-arg VERSION=$(VERSION)
 IMAGENAME := docker.io/testthedocs/lt
 BUILDARG_PLATFORM := --platform linux/amd64,linux/arm64/v8

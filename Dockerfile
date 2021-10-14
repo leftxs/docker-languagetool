@@ -1,4 +1,5 @@
-FROM openjdk:16-slim-buster
+#FROM openjdk:16-slim-buster
+FROM openjdk:18-slim-bullseye
 
 # See Makefile.version
 ARG VERSION
