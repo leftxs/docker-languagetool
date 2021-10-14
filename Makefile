@@ -24,6 +24,11 @@ build:
 build-test:
 	docker build $(BUILDARG_VERSION) -t testthedocs/lt-test .
 
+push-test:
+	docker build $(BUILDARG_VERSION) -t testthedocs/lt-test .
+	docker tag testthedocs/lt-test testthedocs/lt-test:latest
+	docker push testthedocs/lt-test:latest
+
 test: test-cleanup.1
 test: TESTIPADDRESS=$(subst ",,$(shell docker inspect languagetool | jq '.[0].NetworkSettings.IPAddress'))
 test: test-print-ip-address

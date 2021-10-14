@@ -101,6 +101,10 @@ Download the n-gram dataset(s) to your local machine and mount the local n-gram 
 
 https://forum.languagetool.org/t/disable-auto-language-detection/6852/8
 
+```
+docker run --rm --name languagetool-test -p 127.0.0.1:8081:8010 testthedocs/lt-test:latest
+```
+
 ## Local config
 
 ```shell
