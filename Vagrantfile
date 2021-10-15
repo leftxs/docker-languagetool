@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :virtualbox do |v|
     v.gui = true
-    v.memory = 3048
+    v.memory = 4048
   end
 
   # Currently "ubuntu/focal64" on VirtualBox requires `type: "virtualbox"`
@@ -37,10 +37,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, inline: "sudo systemctl enable containerd.service"
 
   # Add Google Chrome
-  config.vm.provision :shell, inline: "sudo apt install -y google-chrome-stable"
+  #config.vm.provision :shell, inline: "sudo apt install -y google-chrome-stable"
 
   # Add Chromium
-  config.vm.provision :shell, inline: "sudo apt install -y chromium-browser"
+  #config.vm.provision :shell, inline: "sudo apt install -y chromium-browser"
 
   # Add Firefox
   config.vm.provision :shell, inline: "sudo apt install -y firefox"

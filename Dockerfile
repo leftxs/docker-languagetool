@@ -17,7 +17,7 @@ RUN wget -q https://www.languagetool.org/download/LanguageTool-$VERSION.zip \
 
 COPY spelling.txt /tmp/spelling.txt
 COPY replace.txt /tmp/replace.txt
-RUN  (echo; cat /tmp/spelling.txt) >> /LanguageTool-$VERSION/org/languagetool/resource/en/hunspell/ignore.txt \
+RUN  (echo; cat /tmp/spelling.txt) >> /LanguageTool-$VERSION/org/languagetool/resource/en/hunspell/spelling.txt \
     && (echo; cat /tmp/replace.txt) >> /LanguageTool-$VERSION/org/languagetool/resource/en/hunspell/replace.txt \
     && rm /tmp/spelling.txt \
     && rm /tmp/replace.txt
